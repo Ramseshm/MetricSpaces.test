@@ -63,12 +63,14 @@ def Prom(l1):
   return (int)(aux/len(l1))
 
 def Sradio(can,r):
+  ok=list()
   for x in can:
     distqu=space.Distance(0,x)
     if(distqu<=r):
-      print(can.index(x))
-      space.printObj(x,distqu)
-
+      ok.appeden(x)
+      #print(can.index(x))
+      #space.printObj(x,distqu)
+  return ok
 def Skvecinos(can,k):
   r=999999999
   nn=list()
@@ -97,9 +99,7 @@ def Skvecinos(can,k):
         aux1.append(nn[nnaux.index(i)])
       nn=aux1
       nnaux=nnaux1
-  for i in range(k):
-    space.printObj(nn[i],nnaux[i])
-
+  return nn
 
 """# Permutantes"""
 
