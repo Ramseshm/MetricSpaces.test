@@ -145,9 +145,9 @@ def Search(q,r,index="indexPermutantes"):
   #print(aux)
   candidatos=ordenar(aux)
   #print(candidatos[0])
-
+  ans=list()
   if(r>0):
-    Sradio(candidatos,r)
+    ans=Sradio(candidatos,r)
   else:
-    Skvecinos(candidatos,r)
-
+    ans=Skvecinos(candidatos,r)
+  return ans
